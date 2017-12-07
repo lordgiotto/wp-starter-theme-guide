@@ -126,7 +126,12 @@ In questo template è possibile mostrare quindi i dati richiesti: per farlo si p
 
 All'interno del loop è possibile accedere alla variabile `$post` che fa riferimento ogni ciclo ad uno dei dati richiesti per la pagina.
 
-Invece di accedere alla variabile `$post` spesso è sufficiente utilizzare degli helper di Wordpress come `the_title()`, `the_content()`, `the_post_thumbnail()`, etc.
+Invece di accedere alla variabile `$post` spesso è sufficiente utilizzare degli helper di Wordpress come 
+
+- `the_title()`: stampa il titolo del post
+- `the_content()`: stampa il contenuto del post
+- `the_excerpt()`: stampa un estratto del contenuto del post
+- `the_post_thumbnail()`: stampa l'immagine del post
 
 ### Quali dati vengono mostrati nel loop?
 
@@ -135,6 +140,8 @@ Dipende dalla pagina richiesta. Per fare due esempi:
 - Se viene richiesta una pagina od un post specifico, verrà utilizzato il template `single.php` ed il loop conterrà un solo elemento, cioè il post richiesto.
 
 - Se viene richiesta un archivio, verrà utilizzato il template `archive.php` ed il loop conterrà n elementi del tipo di post richiesto, dove n è il numero massimo impostato per la paginazione.
+
+
 
 ## Modificare il comporamento di Wordpress
 
