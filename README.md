@@ -141,7 +141,14 @@ Dipende dalla pagina richiesta. Per fare due esempi:
 
 - Se viene richiesta un archivio, verrà utilizzato il template `archive.php` ed il loop conterrà n elementi del tipo di post richiesto, dove n è il numero massimo impostato per la paginazione.
 
+## I campi di post e pagine
 
+Post, pagine e custom post types hanno principalmente tre campi di default: titolo, contenuto ed immagine.
+
+Nel caso si volessero creare altri campi personalizzati da utilizzare è conveniente utilizzare qualche plugin/libreria per facilitarne la creazione, come:
+
+- https://www.advancedcustomfields.com/ (consigliato, più semplice)
+- https://cmb2.io/
 
 ## Modificare il comporamento di Wordpress
 
