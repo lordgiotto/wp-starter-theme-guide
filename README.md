@@ -179,6 +179,14 @@ Potete trovare alcuni esempi all'interno dei files in `/inc/` di questo progetto
 
 - https://generatewp.com/
 
+### Starter Themes
+
+Se preferite non utilizzare questo tema o volete vedere come sono state implementate alcune funzionalità, di seguito alcuni temi "semi-vuoti":
+
+- https://underscores.me/
+- https://github.com/eddiemachado-zz/bones
+- http://html5blank.com/
+
 ### Guides
 
 - https://premium.wpmudev.org/blog/theme-development/ ed in generale altri articoli da https://premium.wpmudev.org/blog/
