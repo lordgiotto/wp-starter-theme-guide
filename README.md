@@ -141,6 +141,31 @@ Dipende dalla pagina richiesta. Per fare due esempi:
 
 - Se viene richiesta un archivio, verrà utilizzato il template `archive.php` ed il loop conterrà n elementi del tipo di post richiesto, dove n è il numero massimo impostato per la paginazione.
 
+### Loop personalizzati
+
+Nel caso si desideri mostrare dei dati che non verrebbero normalmente richiesti per la pagina che si sta guardando, si può creare un loop personalizzato utilizzando la class `WP_Query`, come mostrato nel file `front-page.php`.
+
+La documentazione relativa la trovate qui https://codex.wordpress.org/Class_Reference/WP_Query;
+
+Di seguito un esempio per creare un loop dei post di tipo personalizzato 'project'
+
+```php
+<?php
+$project_query = new WP_Query(array(
+	'post_type'              => array( 'project' )
+));
+?>
+<h3>Ultimi 3 Progetti</h3>
+<?php if ( $project_query->have_posts() ) : ?>
+	<?php while ( $project_query->have_posts() ) : $project_query->the_post(); ?>
+    <h4>
+      <a href="<?php the_permalink();?>"><?php the_title(); ?></a>
+    </h4>
+    <?php the_content(); ?>
+	<?php endwhile; ?>
+<?php endif; ?>
+```
+
 ## I campi di post e pagine
 
 Post, pagine e custom post types hanno principalmente tre campi di default: titolo, contenuto ed immagine.
